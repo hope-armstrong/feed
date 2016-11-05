@@ -1,0 +1,323 @@
+/* line 3, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+body, html {
+  font-family: "Helvetica", sans-serif;
+  background-color: #edeff0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 11, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 15, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+p {
+  margin: 0;
+}
+
+/* line 19, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.container {
+  width: 100%;
+  min-height: 1px;
+}
+
+/* line 24, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.row {
+  text-align: center;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 28, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.row:after {
+  clear: both;
+  display: block;
+  content: '';
+  line-height: 0;
+}
+
+/* line 48, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+[class^="block"] {
+  background: #fff;
+  color: black;
+  border-radius: 5px;
+  height: 324px;
+  box-shadow: 0px 1px 1px 0px #c6ccd2;
+  position: relative;
+  display: inline-table;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+/* line 58, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+[class^="block"]:first-of-type {
+  margin-left: 0;
+}
+
+/* line 63, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+[class^="block"]:nth-of-type(4) {
+  margin-left: 0;
+}
+
+/* line 67, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+[class^="block"]:last-of-type {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* line 74, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.block1 {
+  width: 8.33333%;
+}
+
+/* line 74, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.block2 {
+  width: 15%;
+}
+
+/* line 74, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.block3 {
+  width: 21.66667%;
+}
+
+/* line 74, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.block4 {
+  width: 28.33333%;
+}
+
+/* line 74, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.block5 {
+  width: 35%;
+}
+
+/* line 74, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.block6 {
+  width: 41.66667%;
+}
+
+/* line 74, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.block7 {
+  width: 48.33333%;
+}
+
+/* line 74, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.block8 {
+  width: 55%;
+}
+
+/* line 74, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.block9 {
+  width: 61.66667%;
+}
+
+/* line 74, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.block10 {
+  width: 68.33333%;
+}
+
+/* line 74, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.block11 {
+  width: 75%;
+}
+
+/* line 74, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.block12 {
+  width: 81.66667%;
+}
+
+/* line 77, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.image {
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px 5px 0 0;
+}
+
+/* line 84, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.image:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: darken;
+  cursor: pointer;
+}
+
+/* line 90, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.favorite {
+  display: none;
+}
+
+/* line 94, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.image:hover .favorite {
+  display: block;
+  z-index: 999;
+  position: absolute;
+  right: 0;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* line 105, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.heart {
+  padding-right: 7px;
+  width: 15px;
+  height: 14px;
+}
+
+/* line 111, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.coffee {
+  background-image: url("../img/card-image03.jpg");
+}
+
+/* line 115, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.laptop {
+  background-image: url("../img/card-image04.jpg");
+}
+
+/* line 119, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.music {
+  background-image: url("../img/card-image05.jpg");
+}
+
+/* line 123, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.tablet {
+  background-image: url("../img/card-image02.jpg");
+}
+
+/* line 127, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.camera {
+  background-image: url("../img/card-image01.jpg");
+}
+
+/* line 138, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.title {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  padding: 14px 20px;
+  min-height: 37px;
+  margin: 0;
+  border-bottom: 1px solid #edeff0;
+}
+
+/* line 145, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.author-date {
+  padding: 14px 0 14px 20px;
+  text-align: left;
+}
+
+/* line 150, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.author-date-wrap {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 11px;
+}
+
+/* line 156, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.avatar {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 31px;
+}
+
+/* line 163, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.author {
+  font-size: 12px;
+}
+
+/* line 167, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+.date {
+  font-size: 12px;
+  color: #8d9aa5;
+}
+
+/* Media Queries */
+/* Fix to make blocks an equal height when there is a mix of 2 line and 3 line blocks */
+@media (max-width: 900px) {
+  /* line 177, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  .title {
+    min-height: 55px;
+  }
+}
+
+/* 2 Column Grid */
+@media (max-width: 850px) {
+  /* line 189, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  .block1 {
+    width: 12.5%;
+  }
+  /* line 189, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  .block2 {
+    width: 22.5%;
+  }
+  /* line 189, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  .block3 {
+    width: 32.5%;
+  }
+  /* line 189, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  .block4 {
+    width: 42.5%;
+  }
+  /* line 189, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  .block5 {
+    width: 52.5%;
+  }
+  /* line 189, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  .block6 {
+    width: 62.5%;
+  }
+  /* line 189, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  .block7 {
+    width: 72.5%;
+  }
+  /* line 189, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  .block8 {
+    width: 82.5%;
+  }
+  /* line 189, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  .block9 {
+    width: 92.5%;
+  }
+  /* line 189, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  .block10 {
+    width: 102.5%;
+  }
+  /* line 189, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  .block11 {
+    width: 112.5%;
+  }
+  /* line 189, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  .block12 {
+    width: 122.5%;
+  }
+  /* line 192, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  [class^="block"]:nth-of-type(3) {
+    margin-left: 0;
+  }
+  /* line 196, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  [class^="block"]:nth-of-type(4) {
+    margin-left: 30px;
+  }
+}
+
+/* 1 Column Grid */
+@media (max-width: 550px) {
+  /* line 205, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  .row {
+    padding: 0;
+  }
+  /* line 209, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  [class^="block"] {
+    width: 80%;
+    margin-left: 0 !important;
+  }
+  /* line 214, /Users/hopearmstrong/Documents/Sass/_sass/style.scss */
+  [class^="block"]:last-of-type {
+    margin-bottom: 30px;
+  }
+}
+
+/*# sourceMappingURL=../_css/style.map */

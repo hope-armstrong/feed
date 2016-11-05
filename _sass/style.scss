@@ -1,0 +1,217 @@
+@import "_constants.scss";
+
+body, html {
+	font-family: $font;
+	background-color: $lightgrey;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+p {
+	margin: 0;
+}
+
+.container {
+	width: 100%;
+	min-height:1px;
+}
+
+.row {
+	text-align: center;
+	padding: 0;
+	width: 100%;
+	&:after
+	{
+		clear:both;
+		display:block;
+		content:'';
+		line-height:0;		
+	}
+}
+
+@function calculateBlock ( $number: 1, $margin: $margin) {
+	/* Find width of columns and set margin */
+	$calc : (100%-$margin)/$columns*$number;
+	
+	/* Divide margin by column number */
+	$margin-divide: $margin/$columns;
+	
+	/* Add width of column to amount of margin per block */
+	@return $calc + $margin-divide;  
+}
+
+[class^="block"] {
+	background:#fff;
+	color:black;
+	border-radius:5px;
+	height: 324px;
+	box-shadow: 0px 1px 1px 0px rgba(198,204,210,1);
+	position: relative;
+	display: inline-table;
+	margin-top: $gutter;
+	margin-left: $gutter;
+	&:first-of-type {
+		margin-left: 0;
+	}
+}
+
+[class^="block"]:nth-of-type(4) {
+	margin-left: 0;
+}
+
+[class^="block"]:last-of-type {
+	margin-top: $gutter;
+	margin-bottom: $gutter;
+}
+
+@for $i from 1 to $columns+1 {
+	$width : calculateBlock($i);
+	.block#{$i} { width: $width }
+}
+
+.image {
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px 5px 0 0;
+}
+
+.image:hover {
+	background-color: rgba(0,0,0,.4);
+    background-blend-mode: darken;
+    cursor: pointer;
+}
+
+.favorite {
+	display: none;
+}
+
+.image:hover .favorite {
+	display: block;
+	z-index: 999;
+    position: absolute;
+    right: 0;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+}
+
+.heart {
+	padding-right: 7px;
+	width: 15px;
+	height: 14px;
+}
+
+.coffee {
+	background-image: url("../img/card-image03.jpg");
+}
+
+.laptop {
+	background-image: url("../img/card-image04.jpg");
+}
+
+.music {
+	background-image: url("../img/card-image05.jpg");
+}
+
+.tablet {
+	background-image: url("../img/card-image02.jpg");
+}
+
+.camera {
+	background-image: url("../img/card-image01.jpg");
+}
+
+@mixin title ($font-weight, $font-size, $text-align, $padding) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  text-align: $text-align;
+  padding: $padding;
+}
+
+.title {
+    @include title(bold, 16px, left, 14px 20px);
+	min-height: 37px;
+    margin: 0;
+    border-bottom: 1px solid #edeff0;
+}
+
+.author-date {
+	padding: 14px 0 14px 20px;
+	text-align: left;
+}
+
+.author-date-wrap {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 11px;
+}
+
+.avatar {
+    display: inline-block;
+    vertical-align: middle;
+	width: 30px;
+	height: 31px;
+}
+
+.author {
+	font-size: $font-size;
+}
+
+.date {
+	font-size: $font-size;
+	color: $medium-grey;
+}
+
+/* Media Queries */
+
+/* Fix to make blocks an equal height when there is a mix of 2 line and 3 line blocks */
+@media (max-width: 900px)
+{
+	.title {
+		min-height: 55px;
+	}
+}
+
+/* 2 Column Grid */
+@media (max-width: 850px)
+{   
+    @for $i from 1 to $columns+1
+    {
+        $twoColumn : calculateBlock($i) * 1.5;
+         
+        .block#{$i} { width: $twoColumn; }
+    }
+
+	[class^="block"]:nth-of-type(3) {
+		margin-left: 0;
+	}
+
+	[class^="block"]:nth-of-type(4) {
+		margin-left: $gutter;
+	}
+
+}
+
+/* 1 Column Grid */
+@media (max-width: 550px)
+{
+	.row {
+		padding: 0;
+	}
+
+	[class^="block"] {
+		width: 100%-$margin;
+		margin-left: 0 !important;
+	}
+
+	[class^="block"]:last-of-type {
+		margin-bottom: $gutter;
+	}
+}
